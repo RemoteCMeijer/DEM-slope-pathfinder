@@ -11,26 +11,28 @@ If this gradient is larger than a set gradient the line is cut and a different r
 
 ## Proposed solution 
 A filter is used which moves along the path. At each point of the DEM along the path the gradient to all neighbours in front are calculated. 
-If the gradient is lower than the threshold this position is taken, the following contraints have to be taken into account:
+If the gradient is lower than the threshold this position is taken, the following constraints have to be taken into account:
 
 1. the angle is lower than the threshold
-2. the movemment is towards the end-point
+2. the movement is towards the end-point
 3. If more angles are lower take the lowest AND
 4. take the one point towards the shortest distance to the end point.
 
 Store all these points into a dictionary. 
 
-## Difficulites
-At first, the algoritm was developed and tested for a south to north facing case.
+## Difficulties
+At first, the algorithm was developed and tested for a south to north facing case.
 However, paths can also move from north to south and from west to east and vice versa. 
-To calculate, for example, west to east moving route the numpy array is flipped to be orientated as south ot north facing processed and flipped back and stored.
+To calculate, for example, west to east moving route the numpy array is flipped to be orientated as south to north facing processed and flipped back and stored.
 
 Moreover, starting at an outer edges caused an out of bound error therefore a rim with 'no data value' is added.
 
 ## Task list
 
-- [x] Provide a readme adn publish algoritm 
+- [x] Provide a readme and publish algorithm 
 - [ ] Write down improvements and bugs in the section 'Improvements and bugs' 
 - [ ] Make these changes
 
-## Improvements and bugs 
+## Improvements and bugs
+
+-- to be added --
